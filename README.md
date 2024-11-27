@@ -26,7 +26,6 @@
 In this project, I developed a sorting algorithm for a specific problem using two stacks. The goal of the project is to efficiently sort a stack of integers using a set of predefined operations.
 
 - [Subject](https://github.com/genispicocordo/push_swap/blob/master/subject/en_subject_push_swap.pdf) `PDF`
-- [References](https://github.com/genispicocordo/42-resources#02-push_swap) `GitHub`
 
 ## HOW TO USE
 #### 1º - Clone the repository
