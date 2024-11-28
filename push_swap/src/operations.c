@@ -30,9 +30,10 @@ void    sb(t_stack *b)
     b->top = second;
 }
 // intercambiar los dos primeros elementos de la pila a y b a la vez
-void ss(t_stack *a, t_stack *b) {
-    sa(a); // Aplica el swap en el stack a
-    sb(b); // Aplica el swap en el stack b
+void ss(t_stack *a, t_stack *b) 
+{
+    sa(a);
+    sb(b);
 }
 // La operación pa, push a, toma el elemento en la cima del stack b y lo coloca en la cima del stack a. Si b está vacío, no hace nada.
 void    pa(t_stack *a, t_stack *b)
@@ -63,7 +64,8 @@ void    pb(t_stack *a, t_stack *b)
     b->size++;
 }
 // Rotate a: Desplaza hacia arriba todos los elementos del stack a una posición, de forma que el primer elemento se convierte en el último.
-void ra(t_stack *a) {
+void ra(t_stack *a) 
+{
     t_node *first;
     t_node *last;
 
@@ -83,7 +85,8 @@ void ra(t_stack *a) {
     first->next = NULL;     // El nuevo último nodo no tiene siguiente
 }
 // Rotate b: Desplaza hacia arriba todos los elementos del stack a una posición, de forma que el primer elemento se convierte en el último.
-void rb(t_stack *b) {
+void rb(t_stack *b) 
+{
     t_node *first;
     t_node *last;
 
@@ -109,7 +112,8 @@ void    rr(t_stack *a, t_stack *b)
     rb(b);
 }
 // Reverse rotate a: Desplaza hacia abajo todos los elementos del stack a una posición, de forma que el último elemento se convierte en el primero.
-void rra(t_stack *a) {
+void rra(t_stack *a) 
+{
     t_node *prev;
     t_node *last;
 
@@ -132,7 +136,8 @@ void rra(t_stack *a) {
     a->top = last;       // Actualizamos la cima para que apunte al último nodo
 }
 // Reverse rotate b: Desplaza hacia abajo todos los elementos del stack a una posición, de forma que el último elemento se convierte en el primero.
-void rrb(t_stack *b) {
+void rrb(t_stack *b) 
+{
     t_node *prev;
     t_node *last;
 
