@@ -14,7 +14,7 @@ int main(int argc, char **argv)
         return (1);
     while (i < argc)
     {
-        push(a, atoi(argv[i]));
+        push(a, ft_atoi(argv[i]));
         i++;
     }
 
