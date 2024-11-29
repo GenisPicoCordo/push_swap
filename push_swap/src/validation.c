@@ -9,7 +9,8 @@ int is_number(const char *str)
         i++;
     if (!str[i])
         return (0);
-    while (str[i]) {
+    while (str[i]) 
+    {
         if (!ft_isdigit(str[i]))
             return (0);
         i++;
@@ -28,11 +29,12 @@ int is_in_range(const char *str)
 int has_duplicates(int argc, char **argv)
 {
     int i;
+    int j;
     
     i = 1;
     while (i < argc) 
     {
-        int j = i + 1;
+        j = i + 1;
         while (j < argc) 
         {
             if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
