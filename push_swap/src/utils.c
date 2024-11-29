@@ -28,18 +28,19 @@ void push(t_stack *stack, int value)
 // Agregar un elemento al stack poniendolo siempre al final
 void push_bottom(t_stack *stack, int value) 
 {
-    t_node *new_node = malloc(sizeof(t_node));
+    t_node *new_node;
     t_node *current;
 
+    new node = malloc(sizeof(t_node));
     if (!new_node)
         return;
     new_node->value = value;
     new_node->next = NULL;
-
     if (stack->top == NULL) 
     {
         stack->top = new_node; // Si el stack está vacío, el nuevo nodo es la cima
-    } else 
+    } 
+    else 
     {
         current = stack->top;
         while (current->next) // Recorre hasta el último nodo
