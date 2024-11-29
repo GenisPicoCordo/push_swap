@@ -14,7 +14,7 @@ int main(int argc, char **argv)
         return (1);
     while (i < argc)
     {
-        push(a, ft_atoi(argv[i]));
+        push_bottom(a, ft_atoi(argv[i]));
         i++;
     }
 
@@ -23,3 +23,39 @@ int main(int argc, char **argv)
     free_stack(a);
     return (0);
 }
+/*
+#include "push_swap.h"
+#include <stdio.h>
+
+int main() {
+    t_stack *a = init_stack();
+    t_stack *b = init_stack();
+
+    // Agregar elementos desordenados
+    push_bottom(a, 3);
+    push_bottom(a, 1);
+    push_bottom(a, 4);
+    push_bottom(a, 5);
+    push_bottom(a, 2);
+
+    printf("Antes de sort_five:\n");
+    t_node *current = a->top;
+    while (current) {
+        printf("%d\n", current->value);
+        current = current->next;
+    }
+
+    sort_five(a, b);
+
+    printf("Después de sort_five:\n");
+    current = a->top;
+    while (current) {
+        printf("%d\n", current->value);
+        current = current->next;
+    }
+
+    free_stack(a);
+    free_stack(b);
+    return (0);
+}
+*/
