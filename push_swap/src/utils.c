@@ -1,5 +1,6 @@
 #include "push_swap.h"
 
+// Inicializa un stack vacío
 t_stack *init_stack(void) 
 {
     t_stack *stack;
@@ -12,6 +13,7 @@ t_stack *init_stack(void)
     return (stack);
 }
 
+// Agrega un elemento al stack, uno encima de otro
 void push(t_stack *stack, int value) 
 {
     t_node *new_node;
@@ -24,7 +26,28 @@ void push(t_stack *stack, int value)
     stack->top = new_node;
     stack->size++;
 }
+// Agregar un elemento al stack poniendolo siempre al final
+void push_bottom(t_stack *stack, int value) {
+    t_node *new_node = malloc(sizeof(t_node));
+    t_node *current;
 
+    if (!new_node)
+        return;
+    new_node->value = value;
+    new_node->next = NULL;
+
+    if (stack->top == NULL) {
+        stack->top = new_node; // Si el stack está vacío, el nuevo nodo es la cima
+    } else {
+        current = stack->top;
+        while (current->next) // Recorre hasta el último nodo
+            current = current->next;
+        current->next = new_node; // Inserta el nuevo nodo al final
+    }
+    stack->size++;
+}
+
+// Elimina el elemento superior del stack
 int pop(t_stack *stack) 
 {
     int value;
