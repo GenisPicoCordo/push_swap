@@ -38,6 +38,7 @@ void    rrr(t_stack *a, t_stack *b);
 // Utilidades
 t_stack *init_stack(void);
 void    push(t_stack *stack, int value);
+void push_bottom(t_stack *stack, int value);
 int     pop(t_stack *stack);
 void    free_stack(t_stack *stack);
 
@@ -47,5 +48,14 @@ int is_in_range(const char *str);
 int has_duplicates(int argc, char **argv);
 void print_error(void);
 int validate_arguments(int argc, char **argv);
+
+// Algoritmos de ordenamiento
+void sort_two(t_stack *a);
+void sort_three(t_stack *a);
+void sort_five(t_stack *a, t_stack *b);
+
+// Funciones utiles de ordenamiento
+int find_min(t_stack *a);
+int get_index(t_stack *a, int value);
 
 #endif
