@@ -37,9 +37,7 @@ void push_bottom(t_stack *stack, int value)
     new_node->value = value;
     new_node->next = NULL;
     if (stack->top == NULL) 
-    {
-        stack->top = new_node; // Si el stack está vacío, el nuevo nodo es la cima
-    } 
+        stack->top = new_node; // Si el stack está vacío, el nuevo nodo es la cima 
     else 
     {
         current = stack->top;
