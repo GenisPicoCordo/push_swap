@@ -26,6 +26,7 @@ void	pa(t_stack *a, t_stack *b)
 	a->top = temp;
 	b->size--;
 	a->size++;
+	write(1, "pa\n", 3);
 }
 
 // La operación pb, push b, toma el elemento en la cima del stack a y 
@@ -42,4 +43,5 @@ void	pb(t_stack *a, t_stack *b)
 	b->top = temp;
 	a->size--;
 	b->size++;
+	write(1, "pb\n", 3);
 }
