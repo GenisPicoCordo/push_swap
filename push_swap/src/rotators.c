@@ -30,6 +30,7 @@ void	ra(t_stack *a)
 	}
 	last->next = first;
 	first->next = NULL;
+	write(1, "ra\n", 3);
 }
 
 // Rotate b: Desplaza hacia arriba todos los elementos del stack a 
@@ -50,6 +51,7 @@ void	rb(t_stack *b)
 	}
 	last->next = first;
 	first->next = NULL;
+	write(1, "rb\n", 3);
 }
 
 // ra y rb al mismo tiempo.
@@ -57,4 +59,5 @@ void	rr(t_stack *a, t_stack *b)
 {
 	ra(a);
 	rb(b);
+	write(1, "rr\n", 3);
 }
