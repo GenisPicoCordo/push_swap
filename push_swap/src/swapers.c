@@ -25,6 +25,7 @@ void	sa(t_stack *a)
 	first->next = second->next;
 	second->next = first;
 	a->top = second;
+	write(1, "sa\n", 3);
 }
 
 // swap b: intercambiar los dos primeros elementos de la pila b
@@ -40,6 +41,7 @@ void	sb(t_stack *b)
 	first->next = second->next;
 	second->next = first;
 	b->top = second;
+	write(1, "sb\n", 3);
 }
 
 // intercambiar los dos primeros elementos de la pila a y b a la vez
@@ -47,4 +49,5 @@ void	ss(t_stack *a, t_stack *b)
 {
 	sa(a);
 	sb(b);
+	write(1, "ss\n", 3);
 }
