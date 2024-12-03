@@ -31,6 +31,7 @@ void	rra(t_stack *a)
 	prev->next = NULL;
 	last->next = a->top;
 	a->top = last;
+	write(1, "rra\n", 3);
 }
 
 // Reverse rotate b: Desplaza hacia abajo todos los elementos del stack 
@@ -52,6 +53,7 @@ void	rrb(t_stack *b)
 	prev->next = NULL;
 	last->next = b->top;
 	b->top = last;
+	write(1, "rrb\n", 3);
 }
 
 // rrr rra y rrb al mismo tiempo.
@@ -59,4 +61,5 @@ void	rrr(t_stack *a, t_stack *b)
 {
 	rra(a);
 	rrb(b);
+	write(1, "rrr\n", 3);
 }
