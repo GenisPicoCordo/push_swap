@@ -42,7 +42,7 @@ ${NAME}: ${OBJ_1} ${OBJ_2}
 	make -C $(LIBFTDIR)
 	${CC} ${FLAGS} ${OBJ_1} ${OBJ_2} -o ${NAME} ${INCLUDE}
 
-all: ${NAME} ${BONUS}
+all: ${NAME}
 
 clean:
 	${RM} ${OBJ_1} ${OBJ_2} ${NAME}
