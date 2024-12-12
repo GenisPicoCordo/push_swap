@@ -46,7 +46,6 @@ void	rrr(t_stack *a, t_stack *b);
 
 // Utilities
 t_stack	*init_stack(void);
-void	push(t_stack *stack, int value);
 void	push_bottom(t_stack *stack, int value);
 int		pop(t_stack *stack);
 void	free_stack(t_stack *stack);
