@@ -24,19 +24,6 @@ t_stack	*init_stack(void)
 	return (stack);
 }
 
-// Agrega un elemento al stack, uno encima de otro
-void	push(t_stack *stack, int value)
-{
-	t_node	*new_node;
-
-	new_node = (t_node *)malloc(sizeof(t_node));
-	if (!new_node)
-		return ;
-	new_node->value = value;
-	new_node->next = stack->top;
-	stack->top = new_node;
-	stack->size++;
-}
 // Agregar un elemento al stack poniendolo siempre al final
 
 void	push_bottom(t_stack *stack, int value)
